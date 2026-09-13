@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sri Akshaya Granites — Official Website & Portfolio
 
-## Getting Started
+A modern, high-performance B2B & B2C granite tile manufacturer portfolio and product showcase website built with Next.js 16 (App Router), React 19, Tailwind CSS v4, and Framer Motion.
 
-First, run the development server:
+---
+
+## Features
+
+- **Architectural Luxury Design System**: Obsidian (`#0D1112`), Charcoal (`#171C1E`), Deep Stone (`#222729`), Warm Gold (`#C99A4A`), and Stone White (`#F5F3EF`).
+- **Professional Typography**: `Outfit` geometric display headings paired with `Plus Jakarta Sans` for body copy, technical tolerances, and tabular numbers.
+- **Product Catalog (9 Varieties)**: High-resolution macro stone textures, specifications, dimensions, and dynamic RFQ routing for Black Galaxy, White Crystal, Tan Brown, Steel Grey, Imperial Red, Ivory Brown, Blue Pearl, Kashmir White, and Multicolour Red.
+- **Dynamic Case Studies**: Architectural portfolio with category filtering (Residential, Commercial, Hospitality, Interior, Outdoor).
+- **Interactive RFQ & Quotation Flow**: Multi-field request-for-quote with pre-selected stone varieties, finishes, and instant confirmation screens.
+- **API & Email Handling**: Server-side API endpoints (`/api/quote`, `/api/contact`) with Zod schema validation and graceful Resend fallback logging.
+- **SEO & Structured Data**: Dynamic XML sitemap, `robots.txt`, OpenGraph metadata, and Schema.org Organization JSON-LD.
+
+---
+
+## Getting Started Locally
 
 ```bash
+# 1. Install dependencies
+npm install
+
+# 2. Run local development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# 3. Open browser at http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deploying to Netlify
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The application is pre-configured for one-click deployment on Netlify with the official `@netlify/plugin-nextjs` runtime.
 
-## Learn More
+### Option 1: Deploy via Git (Recommended)
 
-To learn more about Next.js, take a look at the following resources:
+1. Push this repository to **GitHub**, **GitLab**, or **Bitbucket**:
+   ```bash
+   git remote add origin https://github.com/<your-username>/sri-akshaya-granites.git
+   git branch -M main
+   git push -u origin main
+   ```
+2. Go to your [Netlify Dashboard](https://app.netlify.com/) and click **"Add new site"** > **"Import an existing project"**.
+3. Select your repository. Netlify will automatically detect:
+   - **Base directory**: `/` (or leave empty)
+   - **Build command**: `npm run build`
+   - **Publish directory**: `.next`
+   - **Runtime**: `@netlify/plugin-nextjs` (from `netlify.toml`)
+4. *(Optional)* Add Environment Variables in **Site settings > Environment variables**:
+   - `RESEND_API_KEY`: *(Optional)* Your Resend API key for live emails.
+   - `CONTACT_EMAIL`: Recipient email (default: `sales@sriakshayagranites.com`).
+5. Click **"Deploy site"**.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Option 2: Deploy via Netlify CLI
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+# 1. Install Netlify CLI globally
+npm install -g netlify-cli
 
-## Deploy on Vercel
+# 2. Login to your Netlify account
+netlify login
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# 3. Initialize and deploy
+netlify init
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# 4. Deploy production build
+netlify deploy --build --prod
+```
+
+---
+
+## Configuration Files
+
+- [`netlify.toml`](./netlify.toml): Netlify build settings, Node.js 20 environment, Next.js plugin, and caching/security headers.
+- [`.nvmrc`](./.nvmrc): Enforces Node.js version 20 across local and CI/CD environments.
+- [`.env.example`](./.env.example): Template for production environment variables.
