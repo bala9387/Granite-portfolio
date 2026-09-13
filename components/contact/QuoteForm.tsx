@@ -160,7 +160,7 @@ export function QuoteForm({ initialStone }: QuoteFormProps) {
               id="quote-phone"
               type="tel"
               {...register("phone")}
-              placeholder="+91 94432 00000"
+              placeholder="+91 95249 05665"
               className="w-full px-4 py-2.5 bg-[#0D1112] border border-[#2A3034] rounded-lg text-sm text-white placeholder-gray-500 focus:outline-none focus:border-[#C99A4A]"
             />
             {errors.phone && (

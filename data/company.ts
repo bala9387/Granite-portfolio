@@ -56,9 +56,9 @@ export const companyData: CompanyConfig = {
     "Sri Akshaya Granites is a dedicated natural stone manufacturer specializing in high-grade granite tiles, cut-to-size architectural slabs, and bespoke stone solutions crafted for timeless projects.",
   establishedPlaceholder: "[Factory Operations Established]",
   phone: {
-    primary: "+91 94432 56789", // Editable placeholder
+    primary: "+91 95249 05665",
     secondary: "+91 87886 12345", // Editable placeholder
-    displayPrimary: "+91 94432 56789",
+    displayPrimary: "+91 95249 05665",
     displaySecondary: "+91 87886 12345",
   },
   email: {
@@ -86,7 +86,7 @@ export const companyData: CompanyConfig = {
     youtube: "https://youtube.com",
   },
   whatsapp: {
-    number: "+919443256789", // Editable placeholder
+    number: "+919524905665",
     defaultMessage: "Hello Sri Akshaya Granites, I would like to enquire about your granite tiles collection.",
   },
 };
