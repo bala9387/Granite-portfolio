@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useSearchParams } from "next/navigation";
 import { CheckCircle2, AlertCircle, Loader2, ArrowRight, Layers, MapPin } from "lucide-react";
 import { quoteFormSchema, QuoteFormData } from "@/lib/validations";
 import { graniteProducts } from "@/data/products";
@@ -13,13 +14,16 @@ interface QuoteFormProps {
 }
 
 export function QuoteForm({ initialStone }: QuoteFormProps) {
+  const searchParams = useSearchParams();
+  const stoneParam = initialStone || searchParams?.get("stone") || "";
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
-  const matchedProduct = initialStone
+  const matchedProduct = stoneParam
     ? graniteProducts.find(
-        (p) => p.slug.toLowerCase() === initialStone.toLowerCase() || p.name.toLowerCase() === initialStone.toLowerCase()
+        (p) => p.slug.toLowerCase() === stoneParam.toLowerCase() || p.name.toLowerCase() === stoneParam.toLowerCase()
       )
     : null;
 

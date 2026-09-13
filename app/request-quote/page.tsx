@@ -11,22 +11,9 @@ export const metadata: Metadata = {
     "Request factory-direct pricing on granite tiles and cut-to-size stone slabs from Sri Akshaya Granites. Fast quotation for residential and commercial projects.",
 };
 
-interface RequestQuotePageProps {
-  searchParams: Promise<{ stone?: string }>;
-}
+export const dynamic = "force-static";
 
-async function QuoteFormContainer({
-  searchParams,
-}: {
-  searchParams: Promise<{ stone?: string }>;
-}) {
-  const { stone } = await searchParams;
-  return <QuoteForm initialStone={stone} />;
-}
-
-export default function RequestQuotePage({
-  searchParams,
-}: RequestQuotePageProps) {
+export default function RequestQuotePage() {
   return (
     <div className="pt-24 pb-20 bg-[#0D1112] text-white min-h-screen">
       {/* Hero Banner */}
@@ -87,7 +74,7 @@ export default function RequestQuotePage({
               </div>
             }
           >
-            <QuoteFormContainer searchParams={searchParams} />
+            <QuoteForm />
           </Suspense>
         </div>
       </section>

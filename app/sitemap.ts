@@ -2,6 +2,8 @@ import { MetadataRoute } from "next";
 import { graniteProducts } from "@/data/products";
 import { portfolioProjects } from "@/data/portfolio";
 
+export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://sriakshayagranites.com";
 
