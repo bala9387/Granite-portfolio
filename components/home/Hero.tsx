@@ -28,17 +28,17 @@ export function Hero() {
         className="absolute inset-0 z-0 origin-center will-change-transform"
       >
         <Image
-          src="/images/hero/hero-granite-mansion.jpg"
-          alt="Luxury architectural residence showcasing polished black granite tile flooring"
+          src="/images/hero/tile-showroom-showcase.jpg"
+          alt="Tile showroom showcase with multi-colored granite and marble tiles leaning on display stands in bright natural light"
           fill
           priority
           sizes="100vw"
-          className="object-cover object-center filter brightness-[0.75] contrast-[1.12]"
+          className="object-cover object-center filter brightness-[0.92] contrast-[1.06]"
         />
-        {/* Cinematic dark gradients for crisp contrast */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0D1112]/95 via-[#0D1112]/75 to-[#0D1112]/80" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0D1112] via-[#0D1112]/30 to-[#0D1112]/70" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-transparent via-[#0D1112]/40 to-[#0D1112]" />
+        {/* Refined gradient overlays preserving bright natural daylight and showcase tile colors */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0D1112]/92 via-[#0D1112]/60 to-[#0D1112]/20" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0D1112] via-transparent to-[#0D1112]/50" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-transparent via-transparent to-[#0D1112]/40" />
       </motion.div>
 
       {/* Atmospheric Ambient Gold Spotlight */}
